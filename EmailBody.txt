@@ -1,0 +1,5 @@
+Dear [Title] [FirstName] [LastName],
+
+Please find attached your requested document under reference number [RefNum].
+
+Kind regards,
