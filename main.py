@@ -5,6 +5,7 @@ import win32com.client as win32
 
 ## PATHS ##
 MAIN = os.getcwd()
+CONFIG = os.path.join(MAIN, "config")
 ATTACH = os.path.join(MAIN, "attachments")
 
 ###############
@@ -52,10 +53,10 @@ def create_outlook_draft(to, cc, subject, body, attach = None):
         print(f'An error occurred: {e}')
 
 if __name__ == "__main__":
-    config_path = os.path.join(MAIN, 'Config.xlsx')
+    config_path = os.path.join(CONFIG, 'Config.xlsx')
     entries = get_config(config_path)
 
-    email_body_path = os.path.join(MAIN, 'EmailBody.txt')
+    email_body_path = os.path.join(CONFIG, 'EmailBody.txt')
     email_body = read_text(email_body_path)
 
     for entry in entries:
